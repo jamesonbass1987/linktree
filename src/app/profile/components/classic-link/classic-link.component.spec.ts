@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { LinkContainerComponent } from '../link-container/link-container.component';
 
 import { ClassicLinkComponent } from './classic-link.component';
 
@@ -8,7 +9,10 @@ describe('ClassicLinkComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ClassicLinkComponent ]
+      declarations: [
+        ClassicLinkComponent,
+        LinkContainerComponent
+      ]
     })
     .compileComponents();
   });
