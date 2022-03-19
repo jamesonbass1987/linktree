@@ -13,7 +13,27 @@
 
 
 <ng-template #showItem let-venue="venue">
-    <div class="shows-item">
-      {{venue.city}}
-    </div>
+  <div
+    class="shows-item-container"
+    [class.shows-item-container-link]="venue.ticketAvailabilty"
+    (click)="onVenueItemClicked(venue)"
+    >
+      <div
+        class="shows-item"
+        >
+        <div class="shows-item-info">
+          <div class="shows-item-date">{{venue.date | date:'MMM d, y'}}</div>
+          <div class="shows-item-location">
+            {{ venue.venue }}, {{ venue.city }}
+          </div>
+        </div>
+        <div class="shows-item-actions">
+          <ng-container *ngIf="venue.ticketAvailabilty; else soldOut">
+            <img class="shows-item-nav" src="/assets/icons/arrow.svg" alt="view information">
+          </ng-container>
+          <ng-template #soldOut><div class="shows-item-soldout">Sold Out</div></ng-template>
+        </div>
+      </div>
+      <div class="shows-item-divider"></div>
+  </div>
 </ng-template>
