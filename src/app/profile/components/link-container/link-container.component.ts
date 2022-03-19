@@ -15,10 +15,13 @@ export class LinkContainerComponent {
 
   @Output() clicked = new EventEmitter<void>();
 
-  readonly linkSettings$ = this.settingsService.profileSettings$.pipe(map(({color, backgroundColor}) => ({ color, backgroundColor })))
+  readonly linkSettings$ = this.settingsService.profileSettings$.pipe(map(({color, backgroundColor}) => ({ color: undefined, backgroundColor: undefined })))
 
   private readonly isExpandedSubject = new BehaviorSubject<boolean>(false);
   readonly isExpanded$ = this.isExpandedSubject.asObservable();
+
+  readonly defaultBackgroundColor = '#39E09B';
+  readonly defaultColor = '#263238';
 
   constructor(private settingsService: ProfileSettingsService) { }
 

@@ -1,5 +1,4 @@
 
-
 .link {
   &-container {
     min-height: 48px;
@@ -9,5 +8,24 @@
     -moz-border-radius:8px;
     -ms-border-radius:8px;
     -o-border-radius:8px;
-}
+  }
+
+  &-main {
+    display: flex;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+
+    &:hover {
+      cursor: pointer;
+      filter: invert(100%);
+      -webkit-filter: invert(100%);
+      // todo: animate filter event easing on hover
+    }
+  }
 }
