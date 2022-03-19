@@ -4,7 +4,7 @@ import {
   RouterStateSnapshot,
   ActivatedRouteSnapshot
 } from '@angular/router';
-import { Observable, of } from 'rxjs';
+import { catchError, map, Observable, of } from 'rxjs';
 import { LinksService } from '../services/links.service';
 
 @Injectable({
@@ -16,7 +16,14 @@ export class LinksResolver implements Resolve<boolean> {
   constructor(private readonly linksService: LinksService) {}
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> {
-    // Todo: load link data from profile name
-    return of(true);
+    const handle: string = route.params['handle'];
+
+    return this.linksService.getLinksForHandle(handle).pipe(
+      map(() => true),
+      catchError(() => {
+        // Todo: Redirect to error page if api call fails
+        return of(false);
+      }),
+    );
   }
 }

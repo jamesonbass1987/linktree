@@ -13,11 +13,11 @@ export interface ClassicLink extends BaseLink {
 
 export interface MusicLink extends Omit<BaseLink, 'url'> {
   songLength: number;
-  platformLinks: PlatformLink[];
+  platforms: PlatformLink[];
 }
 
 export interface ShowsLink extends Omit<BaseLink, 'url'> {
-  venueLinks: VenueLink[]
+  venues: VenueLink[]
 }
 
 export interface VenueLink extends Omit<BaseLink, 'type'> {
@@ -27,7 +27,7 @@ export interface VenueLink extends Omit<BaseLink, 'type'> {
   ticketAvailabilty: boolean;
 }
 
-export interface PlatformLink extends Omit<BaseLink, 'type' | 'title'> {
+export interface PlatformLink extends Omit<BaseLink, 'type'> {
   type: MusicPlatformType;
 }
 

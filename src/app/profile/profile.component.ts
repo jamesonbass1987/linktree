@@ -10,7 +10,7 @@ import { map } from 'rxjs';
 })
 export class ProfileComponent implements OnInit {
 
-  readonly profileName$ = this.route.params.pipe(map(({ username }: Params) => username))
+  readonly profileName$ = this.route.params.pipe(map(({ handle }: Params) => handle))
 
   constructor(private readonly route: ActivatedRoute) { }
 

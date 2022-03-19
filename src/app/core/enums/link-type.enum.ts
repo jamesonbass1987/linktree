@@ -4,12 +4,3 @@ export enum LinkType {
   Shows = 'shows'
 }
 
-export enum MusicPlatform {
-  Spotify = 'spotify',
-  AppleMusic = 'appleMusic',
-  Soundcloud = 'soundcloud',
-  YouTubeMusic = 'youTubeMusic',
-  Deezer = 'deezer',
-  Tidal = 'tidal',
-  Bandcamp = 'bandcamp'
-}
