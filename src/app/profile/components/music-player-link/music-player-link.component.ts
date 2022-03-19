@@ -29,6 +29,9 @@ export class MusicPlayerLinkComponent {
 
   private readonly selectedPlatformItemSubject = new BehaviorSubject<Platform | undefined>(undefined);
   readonly selectedPlatformItem$ = this.selectedPlatformItemSubject.asObservable();
+  private get selectedPlatformItem() {
+    return this.selectedPlatformItemSubject.value;
+  }
 
   readonly linkSettings$ = this.settingsService.profileSettings$.pipe(map(({ backgroundColor }) => ({ backgroundColor })))
 
@@ -40,11 +43,19 @@ export class MusicPlayerLinkComponent {
     if (navigateToUrl) {
       window.open(platform.url);
     } else {
-      this.setSelectedPlatformItem(platform);
+      if (this.selectedPlatformItem !== platform) {
+        this.setSelectedPlatformItem(platform);
+      } else {
+        this.clearSelectedPlatformItem()
+      }
     }
   }
 
   private setSelectedPlatformItem(platform: Platform): void {
     this.selectedPlatformItemSubject.next(platform);
+  }
+
+  private clearSelectedPlatformItem(): void {
+    this.selectedPlatformItemSubject.next(undefined);
   }
 }

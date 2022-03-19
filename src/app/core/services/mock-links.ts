@@ -57,7 +57,6 @@ export const mockLinksResponse: GetLinksForHandleResponse = {
     } as ShowsLink,
     {
       id: 4,
-      songLength: 200,
       coverArtUrl: 'https://assets-global.website-files.com/5e6a544cadf84b1393e2e022/61324f878f54e6089a96f331_pink_floyd_dark_side_of_the_moon%20(1).jpeg',
       type: LinkType.Music,
       platforms: [

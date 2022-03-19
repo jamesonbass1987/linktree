@@ -9,7 +9,6 @@ export interface ClassicLink {
 }
 export interface MusicLink extends ClassicLink  {
   platforms: Platform[];
-  songLength: number;
   coverArtUrl: string;
 }
 
