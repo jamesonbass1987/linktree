@@ -1,35 +1,35 @@
 import { LinkType } from "../enums/link-type.enum";
 import { MusicPlatformType } from "../enums/music-platform-type.enum";
 
-export interface BaseLink {
+export interface ClassicLink {
     id: number;
-    url: string;
     type: LinkType;
+    url?: string;
+    title?: string;
 }
-
-export interface ClassicLink extends BaseLink {
-  title: string;
-}
-
-export interface MusicLink extends Omit<BaseLink, 'url'> {
+export interface MusicLink extends ClassicLink  {
+  platforms: Platform[];
   songLength: number;
-  platforms: PlatformLink[];
 }
 
-export interface ShowsLink extends Omit<BaseLink, 'url'> {
-  venues: VenueLink[]
+export interface ShowsLink extends ClassicLink {
+  venues: Venue[]
 }
 
-export interface VenueLink extends Omit<BaseLink, 'type'> {
-  date: Date;
-  venue: string;
+export interface Venue {
   city: string;
+  date: Date;
+  id: number;
   ticketAvailabilty: boolean;
+  url: string;
+  venue: string;
 }
 
-export interface PlatformLink extends Omit<BaseLink, 'type'> {
+export interface Platform {
+  id: number;
   type: MusicPlatformType;
+  url: string;
 }
 
 
-export type Link = ClassicLink | MusicLink | PlatformLink | ShowsLink | VenueLink;
+export type Link = ClassicLink | MusicLink | ShowsLink;

@@ -3,11 +3,15 @@ import { CommonModule } from '@angular/common';
 
 import { ProfileRoutingModule } from './profile-routing.module';
 import { ProfileComponent } from './profile.component';
+import { LinkContainerComponent } from './components/link-container/link-container.component';
+import { ClassicLinkComponent } from './components/classic-link/classic-link.component';
 
 
 @NgModule({
   declarations: [
-    ProfileComponent
+    ProfileComponent,
+    LinkContainerComponent,
+    ClassicLinkComponent
   ],
   imports: [
     CommonModule,

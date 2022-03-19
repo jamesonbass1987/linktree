@@ -1,6 +1,8 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { map } from 'rxjs';
+import { LinkType } from '../core/enums/link-type.enum';
+import { LinksService } from '../core/services/links.service';
 
 @Component({
   selector: 'app-profile',
@@ -11,8 +13,14 @@ import { map } from 'rxjs';
 export class ProfileComponent implements OnInit {
 
   readonly profileName$ = this.route.params.pipe(map(({ handle }: Params) => handle))
+  readonly links$ = this.linksService.links$;
 
-  constructor(private readonly route: ActivatedRoute) { }
+  readonly linkType = LinkType;
+
+  constructor(
+    private readonly route: ActivatedRoute,
+    private readonly linksService: LinksService
+  ) { }
 
   ngOnInit(): void {
   }

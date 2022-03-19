@@ -11,7 +11,7 @@ import { mockLinksResponse } from './mock-links';
 })
 export class LinksService {
 
-  private readonly linksSubject = new BehaviorSubject<Link[] | undefined>(undefined);
+  private readonly linksSubject = new BehaviorSubject<Link[]>([]);
   readonly links$ = this.linksSubject.asObservable();
 
   constructor() { }

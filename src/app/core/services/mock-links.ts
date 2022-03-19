@@ -19,6 +19,7 @@ export const mockLinksResponse: GetLinksForHandleResponse = {
     } as ClassicLink,
     {
       id: 3,
+      type: LinkType.Shows,
       venues: [
         {
           id: 1,
@@ -57,6 +58,7 @@ export const mockLinksResponse: GetLinksForHandleResponse = {
     {
       id: 4,
       songLength: 200,
+      type: LinkType.Music,
       platforms: [
         {
           id: 1,

@@ -5,7 +5,20 @@
       <div>@{{ profileName$ | async }}</div>
     </div>
     <div class="profile-links">
-      Links for user...
+      <ng-container *ngFor="let link of links$ | async">
+        <ng-container [ngSwitch]="link.type">
+        <ng-container *ngSwitchCase="linkType.Music">
+
+        </ng-container>
+        <ng-container *ngSwitchCase="linkType.Shows">
+
+        </ng-container>
+        <ng-container *ngSwitchCase="linkType.Classic">
+          <app-classic-link [link]="link"></app-classic-link>
+        </ng-container>
+        </ng-container>
+      </ng-container>
+
     </div>
   </div>
 </div>
