@@ -21,7 +21,7 @@ export class ShowsLinkComponent {
 
   constructor() { }
 
-  onVenueItemClicked(item: Venue): void {
+  public onVenueItemClicked(item: Venue): void {
     window.open(item.url)
   }
 }

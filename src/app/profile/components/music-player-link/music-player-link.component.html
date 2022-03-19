@@ -1,0 +1,30 @@
+<app-link-container [isExpandable]="true" title="Music">
+  <div class="music-player-container">
+    <div class="music-player-media">
+      <!-- add music player here -->
+    </div>
+    <div class="music-player-list">
+      <ng-container *ngFor="let platform of platforms">
+        <ng-container *ngTemplateOutlet="platformItem; context: {platform: platform}"></ng-container>
+      </ng-container>
+    </div>
+  </div>
+</app-link-container>
+
+<ng-template #platformItem let-platform="platform">
+  <div
+    class="music-player-item-container"
+    (click)="onPlatformItemClicked(platform)"
+  >
+    <div class="music-player-item">
+      <div class="music-player-item-logo">
+        <img src="/assets/icons/spotify.svg" alt="platform logo">
+      </div>
+      <div class="music-player-item-info"> {{ platform.type }}</div>
+      <div class="music-player-item-actions">
+        <img class="music-player-item-nav" src="/assets/icons/arrow.svg" alt="view information">
+      </div>
+    </div>
+  </div>
+
+</ng-template>

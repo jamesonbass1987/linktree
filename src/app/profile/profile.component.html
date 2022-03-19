@@ -9,7 +9,7 @@
         <div class="profile-link">
           <ng-container [ngSwitch]="link.type">
             <ng-container *ngSwitchCase="linkType.Music">
-
+              <app-music-player-link [link]="link"></app-music-player-link>
             </ng-container>
             <ng-container *ngSwitchCase="linkType.Shows">
               <app-shows-link [link]="link"></app-shows-link>
