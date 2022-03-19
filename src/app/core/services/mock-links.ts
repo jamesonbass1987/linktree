@@ -7,13 +7,13 @@ export const mockLinksResponse: GetLinksForHandleResponse = {
   links: [
     {
       id: 1,
-      url: 'www.youtube.com',
+      url: 'http://www.youtube.com',
       title: 'My Youtube Page',
       type: LinkType.Classic
     } as ClassicLink,
     {
       id: 2,
-      url: 'www.facebook.com',
+      url: 'http://www.facebook.com',
       title: 'My Facebook Page',
       type: LinkType.Classic
     } as ClassicLink,
@@ -23,7 +23,7 @@ export const mockLinksResponse: GetLinksForHandleResponse = {
       venues: [
         {
           id: 1,
-          url: 'www.songkick.com',
+          url: 'http://www.songkick.com',
           date: new Date(2019, 3, 1),
           venue: 'The Forum',
           city: 'Melbourne',
@@ -31,7 +31,7 @@ export const mockLinksResponse: GetLinksForHandleResponse = {
         },
         {
           id: 1,
-          url: 'www.songkick.com',
+          url: 'http://www.songkick.com',
           date: new Date(2019, 3, 2),
           venue: 'Moda Center',
           city: 'Canberra',
@@ -39,7 +39,7 @@ export const mockLinksResponse: GetLinksForHandleResponse = {
         },
         {
           id: 1,
-          url: 'www.songkick.com',
+          url: 'http://www.songkick.com',
           date: new Date(2019, 3, 3),
           venue: 'Operahouse',
           city: 'Sydney',
@@ -47,7 +47,7 @@ export const mockLinksResponse: GetLinksForHandleResponse = {
         },
         {
           id: 1,
-          url: 'www.songkick.com',
+          url: 'http://www.songkick.com',
           date: new Date(2019, 3, 4),
           venue: 'Staples Center',
           city: 'Brisbane',
@@ -63,37 +63,37 @@ export const mockLinksResponse: GetLinksForHandleResponse = {
         {
           id: 1,
           type: MusicPlatformType.Spotify,
-          url: 'www.spotify.com'
+          url: 'http://www.spotify.com'
         },
         {
           id: 2,
           type: MusicPlatformType.AppleMusic,
-          url: 'www.applemusic.com'
+          url: 'http://www.applemusic.com'
         },
         {
           id: 3,
           type: MusicPlatformType.Soundcloud,
-          url: 'www.soundcloud.com'
+          url: 'http://www.soundcloud.com'
         },
         {
           id: 4,
           type: MusicPlatformType.YouTubeMusic,
-          url: 'www.youtubemusic.com'
+          url: 'http://www.youtubemusic.com'
         },
         {
           id: 5,
           type: MusicPlatformType.Deezer,
-          url: 'www.deezer.com'
+          url: 'http://www.deezer.com'
         },
         {
           id: 6,
           type: MusicPlatformType.Tidal,
-          url: 'www.tidal.com'
+          url: 'http://www.tidal.com'
         },
         {
           id: 7,
           type: MusicPlatformType.Bandcamp,
-          url: 'www.bandcamp.com'
+          url: 'http://www.bandcamp.com'
         },
       ]
     } as MusicLink

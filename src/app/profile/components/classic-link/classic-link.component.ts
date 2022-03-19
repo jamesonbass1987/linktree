@@ -13,4 +13,7 @@ export class ClassicLinkComponent {
 
   constructor() { }
 
+  public onLinkClicked(): void {
+    window.open(this.link.url)
+  }
 }
