@@ -5,18 +5,17 @@ import {
   ActivatedRouteSnapshot
 } from '@angular/router';
 import { Observable, of } from 'rxjs';
-import { LinksService } from '../services/links.service';
+import { ProfileSettingsService } from '../services/profile-settings.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class LinksResolver implements Resolve<boolean> {
+export class ProfileSettingsResolver implements Resolve<boolean> {
 
-
-  constructor(private readonly linksService: LinksService) {}
+  constructor(private readonly profileSettingsService: ProfileSettingsService) {}
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> {
-    // Todo: load link data from profile name
+    // Todo: load profile settings from profile name
     return of(true);
   }
 }
