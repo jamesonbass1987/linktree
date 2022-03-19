@@ -1,3 +1,11 @@
 <div class="profile">
-  <p>Viewing profile for @{{ profileName$ | async }}</p>
+  <div class="profile-container">
+    <div class="profile-header">
+      <img class="profile-header__image" src="/assets/profile-picture.png" alt="profile picture">
+      <div>@{{ profileName$ | async }}</div>
+    </div>
+    <div class="profile-links">
+      Links for user...
+    </div>
+  </div>
 </div>
