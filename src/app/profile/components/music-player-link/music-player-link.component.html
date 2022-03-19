@@ -13,18 +13,19 @@
 
 <ng-template #platformItem let-platform="platform">
   <div
-    class="music-player-item-container"
+    class="music-player-item-link"
     (click)="onPlatformItemClicked(platform)"
   >
     <div class="music-player-item">
       <div class="music-player-item-logo">
-        <img src="/assets/icons/spotify.svg" alt="platform logo">
+          <img [src]="'/assets/icons/' + iconMap[platform.type]" alt="view information">
       </div>
-      <div class="music-player-item-info"> {{ platform.type }}</div>
+      <div class="music-player-item-info"> {{ platform.type | platformDisplay }}</div>
       <div class="music-player-item-actions">
         <img class="music-player-item-nav" src="/assets/icons/arrow.svg" alt="view information">
       </div>
     </div>
+    <div class="music-player-item-divider"></div>
   </div>
 
 </ng-template>

@@ -27,6 +27,18 @@
     width: 97%;
     margin-left: auto;
 
+    &-link {
+      cursor: pointer;
+
+      &:hover {
+        background-color: #F5F7F8;
+      }
+    }
+
+    &-logo {
+      margin-top: 8px;
+    }
+
     &-info {
       flex: 1 1 auto;
       margin-left: 16px;
@@ -42,6 +54,13 @@
       -moz-transform: rotate(270deg);
       -ms-transform: rotate(270deg);
       -o-transform: rotate(270deg);
+    }
+
+
+    &-divider {
+      width: 97%;
+      border-bottom: 1px solid #DADEE0;
+      margin-left: auto;
     }
   }
 }

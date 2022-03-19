@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { Link, MusicLink, Platform } from 'src/app/core/models/link.model';
-
+import { platformIconAssetMap } from './music-player-utils';
 @Component({
   selector: 'app-music-player-link',
   templateUrl: './music-player-link.component.html',
@@ -19,6 +19,8 @@ export class MusicPlayerLinkComponent {
   }
 
   public platforms: Platform[] = [];
+
+  public readonly iconMap = platformIconAssetMap;
 
   constructor() {}
 

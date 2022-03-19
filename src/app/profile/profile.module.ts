@@ -7,6 +7,7 @@ import { LinkContainerComponent } from './components/link-container/link-contain
 import { ClassicLinkComponent } from './components/classic-link/classic-link.component';
 import { ShowsLinkComponent } from './components/shows-link/shows-link.component';
 import { MusicPlayerLinkComponent } from './components/music-player-link/music-player-link.component';
+import { PlatformDisplayPipe } from '../core/pipes/platform-display.pipe';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { MusicPlayerLinkComponent } from './components/music-player-link/music-p
     LinkContainerComponent,
     ClassicLinkComponent,
     ShowsLinkComponent,
-    MusicPlayerLinkComponent
+    MusicPlayerLinkComponent,
+    PlatformDisplayPipe
   ],
   imports: [
     CommonModule,
