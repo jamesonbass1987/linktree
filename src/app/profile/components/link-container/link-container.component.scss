@@ -3,16 +3,14 @@
   &-container {
     min-height: 48px;
     width: 100%;
-
-
-
-}
+  }
 
   &-main {
     display: flex;
     height: 48px;
     justify-content: center;
     align-items: center;
+    font-weight: 400;
     border-radius: 8px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
