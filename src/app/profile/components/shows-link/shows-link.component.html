@@ -1,0 +1,19 @@
+<app-link-container [isExpandable]="true" title="Shows">
+  <div class="shows-container">
+    <div class="shows-list">
+      <ng-container *ngFor="let venue of venues">
+        <ng-container *ngTemplateOutlet="showItem; context: {venue: venue}"></ng-container>
+      </ng-container>
+    </div>
+    <div class="shows-footer">
+      <img class="shows-watermark" src="/assets/icons/by-songkick-wordmark.svg" alt="profile picture">
+    </div>
+  </div>
+</app-link-container>
+
+
+<ng-template #showItem let-venue="venue">
+    <div class="shows-item">
+      {{venue.city}}
+    </div>
+</ng-template>

@@ -5,13 +5,15 @@ import { ProfileRoutingModule } from './profile-routing.module';
 import { ProfileComponent } from './profile.component';
 import { LinkContainerComponent } from './components/link-container/link-container.component';
 import { ClassicLinkComponent } from './components/classic-link/classic-link.component';
+import { ShowsLinkComponent } from './components/shows-link/shows-link.component';
 
 
 @NgModule({
   declarations: [
     ProfileComponent,
     LinkContainerComponent,
-    ClassicLinkComponent
+    ClassicLinkComponent,
+    ShowsLinkComponent
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,32 @@
+
+
+.shows {
+
+
+  &-container {
+    width: 100%;
+    max-height: 340px;
+    background-color: #F2F2F2;
+    border-radius: 8px 0px;
+    -webkit-border-radius: 8px 0px;
+    -moz-border-radius: 8px 0px;
+    -ms-border-radius: 8px 0px;
+    -o-border-radius: 8px 0px;
+}
+
+  &-list {
+    overflow: auto;
+  }
+
+  &-footer {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-watermark {
+    height: 24px;
+  }
+
+}

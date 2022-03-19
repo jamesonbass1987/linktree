@@ -2,7 +2,7 @@ import { GetProfileSettingsResponse } from "../models/get-profile-settings-respo
 
 export const mockSettingsResponse: GetProfileSettingsResponse =  {
   settings: {
-    backgroundColor: "rebeccapurple",
-    color: "palegoldenrod"
+    backgroundColor: "#39E09B",
+    color: "#263238"
   }
 }

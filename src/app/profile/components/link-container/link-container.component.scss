@@ -3,12 +3,10 @@
   &-container {
     min-height: 48px;
     width: 100%;
-    border-radius:8px;
-    -webkit-border-radius:8px;
-    -moz-border-radius:8px;
-    -ms-border-radius:8px;
-    -o-border-radius:8px;
-  }
+
+
+
+}
 
   &-main {
     display: flex;
@@ -27,5 +25,13 @@
       -webkit-filter: invert(100%);
       // todo: animate filter event easing on hover
     }
+  }
+
+  &-expanded {
+    border-radius: 8px 8px 0px 0px;
+    -webkit-border-radius: 8px 8px 0px 0px;
+    -moz-border-radius: 8px 8px 0px 0px;
+    -ms-border-radius: 8px 8px 0px 0px;
+    -o-border-radius: 8px 8px 0px 0px;
   }
 }

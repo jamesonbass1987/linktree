@@ -1,9 +1,18 @@
-<ng-container *ngIf="{settings: linkSettings$ | async} as state">
-  <div  class="link-container">
-    <div [style.background]="state.settings?.backgroundColor || defaultBackgroundColor" [style.color]="state.settings?.color || defaultColor" class="link-main" (click)="onLinkClick()">
+<ng-container *ngIf="{
+  settings: linkSettings$ | async,
+  isExpanded: isExpanded$ | async
+} as state">
+  <div
+    class="link-container"
+    >
+    <div
+      [style.background]="state.settings?.backgroundColor || defaultBackgroundColor"
+      [style.color]="state.settings?.color || defaultColor"
+      [class.link-expanded]="state.isExpanded"
+      class="link-main" (click)="onLinkClick()">
       <span >{{ title }}</span>
     </div>
-    <ng-container *ngIf="isExpanded$ | async">
+    <ng-container *ngIf="state.isExpanded">
       <ng-content></ng-content>
     </ng-container>
   </div>

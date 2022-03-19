@@ -6,7 +6,10 @@ import { ProfileSettingsService } from 'src/app/core/services/profile-settings.s
   selector: 'app-link-container',
   templateUrl: './link-container.component.html',
   styleUrls: ['./link-container.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  animations: [
+    // todo: add animation events for expand and collapse of container
+  ]
 })
 export class LinkContainerComponent {
 
@@ -15,18 +18,28 @@ export class LinkContainerComponent {
 
   @Output() clicked = new EventEmitter<void>();
 
-  readonly linkSettings$ = this.settingsService.profileSettings$.pipe(map(({color, backgroundColor}) => ({ color: undefined, backgroundColor: undefined })))
+  readonly linkSettings$ = this.settingsService.profileSettings$.pipe(map(({color, backgroundColor}) => ({ color, backgroundColor })))
 
   private readonly isExpandedSubject = new BehaviorSubject<boolean>(false);
   readonly isExpanded$ = this.isExpandedSubject.asObservable();
+  private get isExpanded(): boolean {
+    return this.isExpandedSubject.value;
+  }
 
-  readonly defaultBackgroundColor = '#39E09B';
-  readonly defaultColor = '#263238';
+  readonly defaultBackgroundColor = 'rebeccapurple';
+  readonly defaultColor = 'palegoldenrod';
 
   constructor(private settingsService: ProfileSettingsService) { }
 
-  onLinkClick() {
+  public onLinkClick() {
+    if (this.isExpandable) {
+      this.setExpandedState(!this.isExpanded);
+    }
+
     this.clicked.emit();
   }
 
+  private setExpandedState(expanded: boolean): void {
+    this.isExpandedSubject.next(expanded);
+  }
 }

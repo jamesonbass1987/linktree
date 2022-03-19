@@ -1,7 +1,7 @@
 <div class="profile">
   <div class="profile-container">
     <div class="profile-header">
-      <img class="profile-header__image" src="/assets/profile-picture.png" alt="profile picture">
+      <img class="profile-image" src="/assets/profile-picture.png" alt="profile picture">
       <div>@{{ profileName$ | async }}</div>
     </div>
     <div class="profile-links">
@@ -12,7 +12,7 @@
 
             </ng-container>
             <ng-container *ngSwitchCase="linkType.Shows">
-
+              <app-shows-link [link]="link"></app-shows-link>
             </ng-container>
             <ng-container *ngSwitchCase="linkType.Classic">
               <app-classic-link [link]="link"></app-classic-link>
