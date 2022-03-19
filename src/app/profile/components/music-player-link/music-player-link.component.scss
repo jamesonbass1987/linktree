@@ -15,6 +15,44 @@
     -o-border-radius: 0px 0px 8px 8px;
   }
 
+  &-media {
+
+    margin: 16px;
+
+    &-info {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    &-image-container {
+      img {
+        height: 96px;
+        width: 96px;
+      }
+    }
+
+    &-action-container {
+      cursor: pointer;
+      margin-left: 16px;
+
+      img {
+        height: 48px;
+        width: 48px;
+      }
+    }
+  }
+
+  &-progress-bar {
+    background-color: #DADEE0;
+
+    &-completed {
+      height: 4px;
+      width: 50%;
+    }
+  }
+
   &-list {
     max-height: 300px;
     overflow-y: auto;

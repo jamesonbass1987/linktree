@@ -1,8 +1,21 @@
 <app-link-container [isExpandable]="true" title="Music">
   <div class="music-player-container">
-    <div class="music-player-media">
-      <!-- add music player here -->
-    </div>
+    <ng-container *ngIf="selectedPlatformItem$ | async as platformItem">
+      <div class="music-player-media">
+        <!-- TODO: add embedded music player for platforms here via new component -->
+        <div class="music-player-media-info">
+            <div class="music-player-media-image-container">
+              <img [src]="coverArtUrl" alt="view information">
+            </div>
+            <div class="music-player-media-action-container">
+              <img src="/assets/icons/play.svg" alt="play button">
+            </div>
+        </div>
+        <div class="music-player-progress-bar">
+          <div [style.background-color]="(linkSettings$ | async)?.backgroundColor" class="music-player-progress-bar-completed"></div>
+        </div>
+      </div>
+    </ng-container>
     <div class="music-player-list">
       <ng-container *ngFor="let platform of platforms">
         <ng-container *ngTemplateOutlet="platformItem; context: {platform: platform}"></ng-container>
@@ -14,10 +27,10 @@
 <ng-template #platformItem let-platform="platform">
   <div
     class="music-player-item-link"
-    (click)="onPlatformItemClicked(platform)"
+    (click)="onPlatformItemClicked($event, platform, false)"
   >
     <div class="music-player-item">
-      <div class="music-player-item-logo">
+      <div (click)="onPlatformItemClicked($event, platform, true)" class="music-player-item-logo">
           <img [src]="'/assets/icons/' + iconMap[platform.type]" alt="view information">
       </div>
       <div class="music-player-item-info"> {{ platform.type | platformDisplay }}</div>
@@ -27,5 +40,4 @@
     </div>
     <div class="music-player-item-divider"></div>
   </div>
-
 </ng-template>
