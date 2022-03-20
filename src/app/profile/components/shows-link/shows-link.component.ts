@@ -22,6 +22,8 @@ export class ShowsLinkComponent {
   constructor() { }
 
   public onVenueItemClicked(item: Venue): void {
-    window.open(item.url)
+    if (item.ticketAvailabilty) {
+      window.open(item.url)
+    }
   }
 }
