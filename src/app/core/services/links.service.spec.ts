@@ -1,5 +1,4 @@
 import { TestBed } from '@angular/core/testing';
-
 import { LinksService } from './links.service';
 
 describe('LinksService', () => {

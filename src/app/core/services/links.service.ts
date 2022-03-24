@@ -3,7 +3,6 @@ import { BehaviorSubject, catchError, Observable, of, tap } from 'rxjs';
 import { GetLinksForHandleRequest } from '../models/get-links-for-handle-request.model';
 import { GetLinksForHandleResponse } from '../models/get-links-for-handle-response.model';
 import { Link } from '../models/link.model';
-
 import { mockLinksResponse } from './mock-links';
 
 @Injectable({

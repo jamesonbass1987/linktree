@@ -4,6 +4,7 @@ import { MusicPlatformType } from 'src/app/core/enums/music-platform-type.enum';
 import { Link, MusicLink, Platform } from 'src/app/core/models/link.model';
 import { ProfileSettingsService } from 'src/app/core/services/profile-settings.service';
 import { platformIconAssetMap } from './music-player-utils';
+
 @Component({
   selector: 'app-music-player-link',
   templateUrl: './music-player-link.component.html',

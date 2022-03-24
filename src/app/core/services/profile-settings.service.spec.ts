@@ -1,5 +1,4 @@
 import { TestBed } from '@angular/core/testing';
-
 import { ProfileSettingsService } from './profile-settings.service';
 
 describe('ProfileSettingsService', () => {

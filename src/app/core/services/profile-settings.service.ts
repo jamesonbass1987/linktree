@@ -4,6 +4,7 @@ import { GetProfileSettingsRequest } from '../models/get-profile-settings-reques
 import { GetProfileSettingsResponse } from '../models/get-profile-settings-response.model';
 import { ProfileSettings } from '../models/profile-settings.model';
 import { mockSettingsResponse } from './mock-settings';
+
 @Injectable({
   providedIn: 'root'
 })

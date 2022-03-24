@@ -12,7 +12,6 @@ import { LinksService } from '../services/links.service';
 })
 export class LinksResolver implements Resolve<boolean> {
 
-
   constructor(private readonly linksService: LinksService) {}
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> {
