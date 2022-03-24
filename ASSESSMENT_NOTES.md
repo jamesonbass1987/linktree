@@ -8,7 +8,7 @@
 
 3. There are a number of TODO's on desired features to be added. Including animation events, 404 routing redirects, and error handling from api responses. Given more time (and functional api's) these could be implemented.
 
-4.  It is possible to componentize the links further (show link item and venue link item). A driving factor for this would be potential reusability and a slightly smaller list component template. 
+4.  It is possible to componentize the links further (show link item and venue link item). A driving factor for this would be potential reusability and a slightly smaller list component template. This would also align with a more atomic design of starting with the lowest level component and working outwards. 
 
 ## TBC Feature Notes
 
